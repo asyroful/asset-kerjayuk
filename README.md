@@ -1,6 +1,6 @@
 # Aset Kerjayuk (@kerjayuk/assets)
 
-Pustaka aset dan komponen ikon framework-agnostic untuk Kerjayuk, dibuat menggunakan Web Components.
+Pustaka aset dan komponen ikon untuk Kerjayuk, dibuat menggunakan Web Components.
 
 ## Instalasi
 
@@ -24,5 +24,5 @@ Setelah itu, Anda bisa menggunakan tag `<kerjayuk-icon>` di mana saja di dalam H
 ```html
 <kerjayuk-icon name="home"></kerjayuk-icon>
 
-<kerjayuk-icon name="profile" active="true" size="32"></kerjayuk-icon>
+<kerjayuk-icon name="profile" color="#F82C17" size="32"></kerjayuk-icon>
 ```
