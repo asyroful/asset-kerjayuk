@@ -24,5 +24,5 @@ Setelah itu, Anda bisa menggunakan tag `<kerjayuk-icon>` di mana saja di dalam H
 ```html
 <kerjayuk-icon name="home"></kerjayuk-icon>
 
-<kerjayuk-icon name="profile" color="#F82C17" size="32"></kerjayuk-icon>
+<kerjayuk-icon name="profile" class="text-info" size="32" secondary-color="#FFD700"></kerjayuk-icon>
 ```
