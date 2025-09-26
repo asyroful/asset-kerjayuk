@@ -17,12 +17,12 @@ Impor library ini sekali saja di titik masuk utama aplikasi Anda (misal, `main.j
 import '@kerjayuk/assets';
 ```
 
-Setelah itu, Anda bisa menggunakan tag `<kerjayuk-icon>` di mana saja di dalam HTML, terlepas dari framework yang Anda gunakan.
+Setelah itu, Anda bisa menggunakan tag `<pcs-icon>` di mana saja di dalam HTML, terlepas dari framework yang Anda gunakan.
 
 ### Contoh Penggunaan
 
 ```html
-<kerjayuk-icon name="home"></kerjayuk-icon>
+<pcs-icon name="home"></pcs-icon>
 
-<kerjayuk-icon name="profile" class="text-info" size="32" secondary-color="#FFD700"></kerjayuk-icon>
+<pcs-icon name="profile" class="text-info" size="32" secondary-color="#FFD700"></pcs-icon>
 ```

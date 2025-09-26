@@ -4,16 +4,17 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "description": "Pustaka aset dan komponen ikon untuk Kerjayuk.",
+  "description": "Pustaka aset dan komponen ikon untuk PCS.",
   "main": "lib/index.js",
   "type": "module",
-  "author": "Kerjayuk Team",
+  "author": "PCS Team",
   "license": "ISC",
   "keywords": [
     "assets",
     "icons",
     "web-components",
-    "kerjayuk"
+    "kerjayuk",
+    "pcs-icon"
   ],
   "files": [
     "lib",
