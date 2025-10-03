@@ -1,8 +1,8 @@
 {
-  "name": "@asyroful/asset-kerjayuk",
-  "version": "0.1.15",
+  "name": "@pcs/icons",
+  "version": "1.0.0",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "access": "public"
   },
   "description": "Pustaka aset dan komponen ikon untuk PCS.",
   "main": "lib/index.js",
@@ -13,7 +13,6 @@
     "assets",
     "icons",
     "web-components",
-    "kerjayuk",
     "pcs-icon"
   ],
   "files": [
