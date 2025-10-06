@@ -23,15 +23,27 @@ npm install pcs-asset
 
 Kumpulan fungsi utilitas vanilla JS yang bisa digunakan di React, Vue, maupun project JS lain.
 
+
 ### Contoh Penggunaan
 
 ```js
 import { formatDate, formatDateTime, formatTime, debounce, throttle, isEmpty, copyToClipboard, randomString, formatCurrency } from 'pcs-asset/utils';
 
-// Format tanggal
-formatDate(new Date(), 'dd-MM-yyyy'); // "06-10-2025"
-formatDateTime(new Date()); // "2025-10-06 13:45:00"
-formatTime(new Date()); // "13:45:00"
+// Format tanggal dinamis
+formatDate(new Date('2002-06-10'), 'dd-MM-yyyy'); // "10-06-2002"
+formatDate(new Date('2002-06-10'), 'dd/MM/yyyy'); // "10/06/2002"
+formatDate(new Date('2002-06-10'), 'dd-MMMM-yyyy'); // "10-Juni-2002"
+formatDate(new Date('2002-06-10'), 'dd MMM yyyy'); // "10 Jun 2002"
+formatDate(new Date('2002-06-10'), 'dd-MM-yy'); // "10-06-02"
+formatDate(new Date('2002-06-10'), 'yyyy/MM/dd'); // "2002/06/10"
+
+// Format waktu dinamis
+formatTime(new Date('2025-10-06T13:45:12'), 'HH:mm'); // "13:45"
+formatTime(new Date('2025-10-06T13:45:12'), 'HH:mm:ss'); // "13:45:12"
+
+// Format dateTime dinamis
+formatDateTime(new Date('2025-10-06T13:45:12'), 'dd MMMM yyyy HH:mm'); // "06 Oktober 2025 13:45"
+formatDateTime(new Date('2025-10-06T13:45:12'), 'yyyy-MM-dd HH:mm:ss'); // "2025-10-06 13:45:12"
 
 // Format uang
 formatCurrency(1234567); // "Rp 1.234.567"
