@@ -1,45 +1,74 @@
-# PCS Icons
 
-Pustaka aset dan komponen ikon untuk PCS, dibuat menggunakan Web Components.
+# PCS Asset
+
+
+Pustaka aset dan komponen ikon & utils untuk PCS, dibuat menggunakan Web Components dan vanilla JS.
 
 ## Instalasi
 
+
 ```bash
-npm install pcs-icons
+npm install pcs-asset
 ```
 
 ### Playground
+
 
 [Demo Playground](https://stellar.pcsindonesia.com/playground)
 
 ---
 
 
-## Penggunaan di React
+## Utils (pcs-asset/utils)
 
-PCS Icons adalah Web Component (Custom Element), sehingga dapat digunakan di React. Secara default, custom element harus menggunakan huruf kecil di JSX:
+Kumpulan fungsi utilitas vanilla JS yang bisa digunakan di React, Vue, maupun project JS lain.
 
-```jsx
-import 'pcs-icons';
+### Contoh Penggunaan
 
-function App() {
-	return (
-		<div>
-			<pcs-icon name="Home" color="#333" size="32"></pcs-icon>
-		</div>
-	);
-}
+```js
+import { formatDate, formatDateTime, formatTime, debounce, throttle, isEmpty, copyToClipboard, randomString, formatCurrency } from 'pcs-asset/utils';
 
-export default App;
+// Format tanggal
+formatDate(new Date(), 'dd-MM-yyyy'); // "06-10-2025"
+formatDateTime(new Date()); // "2025-10-06 13:45:00"
+formatTime(new Date()); // "13:45:00"
+
+// Format uang
+formatCurrency(1234567); // "Rp 1.234.567"
+formatCurrency(1234567, ''); // "1.234.567"
+
+// Debounce
+const onInput = debounce((val) => console.log(val), 300);
+
+// Throttle
+const onScroll = throttle(() => console.log('scroll'), 500);
+
+// Cek kosong
+isEmpty(''); // true
+isEmpty([]); // true
+isEmpty({}); // true
+
+// Copy ke clipboard
+copyToClipboard('teks');
+
+// Random string
+randomString(10); // "aZ8kLmP0qR"
 ```
 
-### Menggunakan Wrapper agar Bisa <PCSIcon />
+---
+
+---
+
+
+
+## Penggunaan Icon (pcs-asset/icons)
+
+### React
 
 Jika ingin menggunakan sintaks <PCSIcon /> di JSX, Anda bisa membuat komponen wrapper seperti berikut:
 
 ```jsx
-import { PCSIcon} from 'pcs-icons';
-
+import { PCSIcon } from 'pcs-asset/icons';
 
 return (
   <PCSIcon name="Home" color="#F82C17" size={20} />
@@ -49,16 +78,16 @@ return (
 
 Dengan cara ini, Anda bisa menggunakan <PCSIcon /> seperti komponen React biasa.
 
-## Penggunaan di Vue
+### Vue
 
 Di Vue, cukup import dan gunakan seperti tag HTML biasa:
 
 ```js
-import 'pcs-icons';
+import 'pcs-asset/icons';
 ```
 
 ```html
 <template>
-	<pcs-icon name="Home" color="#333" size="32"></pcs-icon>
+  <pcs-icon name="Home" color="#333" size="32"></pcs-icon>
 </template>
 ```

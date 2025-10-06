@@ -1,5 +1,5 @@
 {
-  "name": "pcs-icons",
+  "name": "pcs-asset",
   "version": "1.0.0",
   "publishConfig": {
     "access": "public"
@@ -18,5 +18,9 @@
   "files": [
     "lib",
     "img"
-  ]
+  ],
+  "exports": {
+    "./icons": "./lib/index.js",
+    "./utils": "./lib/pcs-utils.js"
+  }
 }
